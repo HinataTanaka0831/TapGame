@@ -8,11 +8,11 @@ public class ClickManager : MonoBehaviour
     /// <summary>
     /// 更新
     /// </summary>
-   private void Update()
-    {
-        OnEnableGameButton();
-        OnEnableResultButton();
-    }
+   void Update()
+   {
+       OnEnableGameButton();
+       OnEnableResultButton();
+   }
 
     /// <summary>
     /// オブジェクトをタップしたら削除する
@@ -34,7 +34,7 @@ public class ClickManager : MonoBehaviour
                 BalloonController target = hit.collider.GetComponent<BalloonController>();
                 if (target != null)
                 {
-                    target.Pop();
+                    target.Fade();
                 }
             }
         }

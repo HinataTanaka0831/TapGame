@@ -14,7 +14,7 @@ public class ResultManager : MonoBehaviour
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-    private void Start()
+    void Start()
     {
         // ゲーム中に保存されたスコアを読み出す　
         // ※まだ保存されていなければ0を返す

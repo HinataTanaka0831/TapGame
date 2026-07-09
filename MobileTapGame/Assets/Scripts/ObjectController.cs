@@ -5,21 +5,21 @@ using UnityEngine;
 public class BalloonController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float destroyY = 6f; // 画面上部で消滅するY座標
+    [SerializeField] private float destroyY = 6f; 
 
     [Header("Score Settings")]
-    [SerializeField] private int scoreValue = 10; // この風船を割ったときの獲得スコア
+    [SerializeField] private int scoreValue = 10;
 
     [Header("Visual Effects")]
-    [SerializeField] private GameObject popEffectPrefab; // 割れたときのパーティクルプレハブ
+    [SerializeField] private GameObject fadeEffectPrefab;
 
     private Rigidbody2D rigidBody2D;
 
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-   private void Start()
-    {
+   void Start()
+   {
         rigidBody2D = GetComponent<Rigidbody2D>();
         
         // Rigidbody2Dの重力を無効化（スクリプトから確実に設定）
@@ -28,12 +28,12 @@ public class BalloonController : MonoBehaviour
             rigidBody2D.gravityScale = 0.0f;
         }
 
-    }
+   }
 
     /// <summary>
     /// 更新
     /// </summary>
-    private void Update()
+    void Update()
     {
         // 画面上部（destroyY）を超えたら自動で消滅する
         if (transform.position.y > destroyY)
@@ -46,12 +46,18 @@ public class BalloonController : MonoBehaviour
     /// <summary>
     /// オブジェクトがタップされたら削除する
     /// </summary>
-    public void Pop()
+    public void Fade()
     {
         // エフェクト生成
-        if (popEffectPrefab != null)
+        if (fadeEffectPrefab != null)
         {
-            Instantiate(popEffectPrefab, transform.position, Quaternion.identity);
+            Instantiate(fadeEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        // オブジェクトが消えた時のサウンドを再生
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlayFadeSound();
         }
 
         // スコア加算

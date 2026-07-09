@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-    private void Start()
+    void Start()
     {
         // 初期UIの更新
         UpdateTimeUI();

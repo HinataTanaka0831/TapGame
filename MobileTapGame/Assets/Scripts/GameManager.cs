@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("Game Settings")]
-    [SerializeField] private float gameTime = 30.0f; // ゲーム制限時間
+    [SerializeField] private float gameTime = 30.0f;
     private float remainingTime;
 
     public float RemainingTime => remainingTime;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-    private void Start()
+    void Start()
     {
         // 制限時間を初期化
         remainingTime = gameTime;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 更新
     /// </summary>
-    private void Update()
+    void Update()
     {
         // 制限時間のカウントダウンをして、0になったらスコアを保存してリザルトシーンに遷移する
         remainingTime -= Time.deltaTime;
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        UIManager.Instance?.UpdateTimeUI();
+        UIManager.Instance.UpdateTimeUI();
     }
 
 

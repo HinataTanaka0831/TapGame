@@ -690,8 +690,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652dff898732f2d4baa3c5b94603467c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  popSound: {fileID: 0}
+  audioSource: {fileID: 771274460}
+  backgroundMusic: {fileID: 0}
+  inflateSound: {fileID: 8300000, guid: 31a93aa7c93f9b148ab9f2c54b67f08a, type: 3}
+  popSound: {fileID: 8300000, guid: aaef49b1739595b468b32086385187be, type: 3}
 --- !u!4 &771274462
 Transform:
   m_ObjectHideFlags: 0
@@ -986,7 +988,7 @@ GameObject:
   - component: {fileID: 1921633075}
   - component: {fileID: 1921633074}
   m_Layer: 0
-  m_Name: BalloonGenerator
+  m_Name: ObjectGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1005,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloonPrefab: {fileID: 5153284112592626293, guid: ef46fb48d5f1c6b41a668ba22994a6d1, type: 3}
-  span: 0.6
+  spawnTime: 1.5
   deleteSpeed: 2
 --- !u!4 &1921633075
 Transform:
@@ -1075,8 +1077,8 @@ SceneRoots:
   - {fileID: 2073867936}
   - {fileID: 137929712}
   - {fileID: 381634644}
+  - {fileID: 771274462}
   - {fileID: 499448757}
+  - {fileID: 248765873}
   - {fileID: 35133197}
   - {fileID: 153961985}
-  - {fileID: 248765873}
-  - {fileID: 771274462}

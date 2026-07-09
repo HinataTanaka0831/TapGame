@@ -31,10 +31,10 @@ public class ScoreManager : MonoBehaviour
     /// <summary>
     /// Å‰‚Éˆê‰ñ‚¾‚¯ŒÄ‚Î‚ê‚é‰Šú‰»
     /// </summary>
-   private void Start()
-    {
-        this.score = 0;
-    }
+   void Start()
+   {
+       this.score = 0;
+   }
 
     /// <summary>
     /// ƒXƒRƒA‚ğ‰ÁZ‚·‚é

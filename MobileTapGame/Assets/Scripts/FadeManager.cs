@@ -10,13 +10,18 @@ public class FadeManager : MonoBehaviour
     private CanvasGroup canvasGroup;
     private bool isFading = false;
 
+
+    /// <summary>
+    /// ゲーム内に一つしか存在しないようにする
+    /// </summary>
     private void Awake()
     {
-        // シングルトンの設定
+        // 最初の一つ目ならインスタンスを保存し、2つ以上生成されないように重複したオブジェクトは破棄する
+        // シーンを跨いでも破棄されないようにする。既にインスタンスが存在する場合は破棄する
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // シーン遷移しても消えないようにする
+            DontDestroyOnLoad(gameObject);
             InitFadeCanvas();
         }
         else
@@ -25,7 +30,9 @@ public class FadeManager : MonoBehaviour
         }
     }
 
-    // フェード用の黒い画面（Canvas）をプログラムから自動生成する
+    /// <summary>
+    /// フェード用の黒い画面（Canvas）をプログラムから自動生成する
+    /// </summary>
     private void InitFadeCanvas()
     {
         // キャンバスの作成
@@ -66,7 +73,12 @@ public class FadeManager : MonoBehaviour
         StartCoroutine(FadeSequence(sceneName, fadeTime));
     }
 
-    // フェードアニメーションのコルーチン
+    /// <summary>
+    /// 複数フレームにまたがってフェードを実行する
+    /// </summary>
+    /// <param name="sceneName">各シーンの名前</param>
+    /// <param name="fadeTime">フェードアニメーションをする時間</param>
+    /// <returns></returns>
     private IEnumerator FadeSequence(string sceneName, float fadeTime)
     {
         isFading = true;

@@ -10,7 +10,8 @@ public class ButtonController : MonoBehaviour
     /// </summary>
    public void GameScene()
    {
-         if (FadeManager.Instance != null)
+        // フェードして画面遷移する
+        if (FadeManager.Instance != null)
          {
               FadeManager.Instance.LoadScene("Game");
          }
@@ -25,6 +26,7 @@ public class ButtonController : MonoBehaviour
     /// </summary>
     public void TitleScene()
     {
+        // フェードして画面遷移する
         if (FadeManager.Instance != null)
         {
             FadeManager.Instance.LoadScene("Title");
