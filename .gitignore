@@ -1,0 +1,83 @@
+# Unity用の .gitignore
+
+# ユーザー固有の設定やビルド成果物など、共有不要なもの
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# メモリプロファイラ等のキャッシュ
+[Mm]emoryCaptures/
+
+# Asset Storeのダウンロードキャッシュ
+/[Aa]ssets/[Aa]ssetStoreTools*
+
+# Visual Studio / IDE の生成ファイル
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# OSが生成する隠しファイル
+.DS_Store
+Thumbs.db
+Desktop.ini
+# === Unity 生成フォルダ・一時ファイル ===
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# === アセット・パッケージキャッシュ ===
+/[Aa]ssets/[Aa]ssetStoreTools*
+.collabignore
+/[Pp]ackages/manifest.json
+
+# === ビルド結果（必要に応じて追加） ===
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.crashlytics
+
+# === Visual Studio / C# 関連 ===
+ExportedObj/
+.vs/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# === その他 OS が勝手に作るファイル ===
+.DS_Store
+Thumbs.db
