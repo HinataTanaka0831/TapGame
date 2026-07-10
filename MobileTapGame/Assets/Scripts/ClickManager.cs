@@ -10,14 +10,14 @@ public class ClickManager : MonoBehaviour
     /// </summary>
    void Update()
    {
-       OnEnableGameButton();
-       OnEnableResultButton();
+       OnEnableTapObject();
+       OnEnableTapButton();
    }
 
     /// <summary>
     /// オブジェクトをタップしたら削除する
     /// </summary>
-   private void OnEnableGameButton()
+   private void OnEnableTapObject()
     {
         // 左クリックまたは画面タップされた瞬間
         if (Input.GetMouseButtonDown(0))
@@ -43,7 +43,7 @@ public class ClickManager : MonoBehaviour
     /// <summary>
     /// リザルト画面のボタンをタップしたらシーン遷移する
     /// </summary>
-   private void OnEnableResultButton()
+   private void OnEnableTapButton()
     {
         // 左クリックまたは画面タップされた瞬間
         if (Input.GetMouseButtonDown(0))
@@ -57,6 +57,11 @@ public class ClickManager : MonoBehaviour
             // 何かのコライダーに当たったかチェックし、当たったオブジェクトに「ButtonControllerスクリプト」がついていたらタグを判定してシーン遷移する
             if (hit.collider != null)
             {
+                if (SoundManager.Instance != null)
+                {
+                    SoundManager.Instance.PlayButtonSound();
+                }
+
                 ButtonController target = hit.collider.GetComponent<ButtonController>();
                 if (target != null)
                 {

@@ -16,6 +16,12 @@ public class ResultManager : MonoBehaviour
     /// </summary>
     void Start()
     {
+        // リザルト画面中に流れるBGMを再生する
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.PlayBackgroundMusicResult();
+        }
+
         // ゲーム中に保存されたスコアを読み出す　
         // ※まだ保存されていなければ0を返す
         int finalScore = PlayerPrefs.GetInt("LatestScore", 0);

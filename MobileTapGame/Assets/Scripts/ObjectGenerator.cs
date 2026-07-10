@@ -22,12 +22,6 @@ public class BalloonGenerator : MonoBehaviour
         {
             this.delta = 0f;
 
-            // オブジェクトが生成される効果音を再生する
-            if (SoundManager.Instance != null)
-            {
-                SoundManager.Instance.PlayAppearSound();
-            }
-
             GameObject go = Instantiate(objectPrefab);
 
             // オブジェクトの位置をランダムに決定する（前回と同じ位置には生成しない）
