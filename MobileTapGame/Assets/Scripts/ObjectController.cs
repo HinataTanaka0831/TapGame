@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class BalloonController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float destroyY = 6f; 
-
     [Header("Score Settings")]
     [SerializeField] private int scoreValue = 10;
 
@@ -35,11 +32,6 @@ public class BalloonController : MonoBehaviour
     /// </summary>
     void Update()
     {
-        // 画面上部（destroyY）を超えたら自動で消滅する
-        if (transform.position.y > destroyY)
-        {
-            Destroy(gameObject);
-        }
 
     }
 
@@ -48,10 +40,9 @@ public class BalloonController : MonoBehaviour
     /// </summary>
     public void Fade()
     {
-        // エフェクト生成
-        if (fadeEffectPrefab != null)
+        if (EffectGenerator.Instance != null)
         {
-            Instantiate(fadeEffectPrefab, transform.position, Quaternion.identity);
+            EffectGenerator.Instance.OnTap(transform.position);
         }
 
         // オブジェクトが消えた時のサウンドを再生

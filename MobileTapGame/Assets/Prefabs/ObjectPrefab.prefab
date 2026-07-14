@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2901191093456959280}
   - component: {fileID: 4738111906538805547}
-  - component: {fileID: 6302708920806144887}
+  - component: {fileID: -143103673961723510}
   - component: {fileID: 2796131708126557488}
   - component: {fileID: 22938120919959182}
   - component: {fileID: -7742039828825373404}
@@ -29,7 +29,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5153284112592626293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6302708920806144887
+--- !u!114 &-143103673961723510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844f1b5a8f3ce53478b01efea494d985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyY: 6
   scoreValue: 10
   fadeEffectPrefab: {fileID: 0}
 --- !u!223 &2796131708126557488
