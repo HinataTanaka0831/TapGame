@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-    void Start()
+   private void Start()
     {
         // 制限時間を初期化
         remainingTime = gameTime;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 更新
     /// </summary>
-    void Update()
+    private void Update()
     {
         // 制限時間のカウントダウンをして、0になったらスコアを保存してリザルトシーンに遷移する
         remainingTime -= Time.deltaTime;

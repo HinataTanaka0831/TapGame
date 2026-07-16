@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BalloonController : MonoBehaviour
+public class ObjectController : MonoBehaviour
 {
     [Header("Score Settings")]
     [SerializeField] private int scoreValue = 10;
-
-    [Header("Visual Effects")]
-    [SerializeField] private GameObject fadeEffectPrefab;
 
     private Rigidbody2D rigidBody2D;
 
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-   void Start()
+  private void Start()
    {
         rigidBody2D = GetComponent<Rigidbody2D>();
         
@@ -27,22 +24,15 @@ public class BalloonController : MonoBehaviour
 
    }
 
-    /// <summary>
-    /// 更新
-    /// </summary>
-    void Update()
-    {
-
-    }
 
     /// <summary>
     /// オブジェクトがタップされたら削除する
     /// </summary>
     public void Fade()
     {
-        if (EffectGenerator.Instance != null)
+        if (EffectManager.Instance != null)
         {
-            EffectGenerator.Instance.OnTap(transform.position);
+            EffectManager.Instance.OnTap(transform.position);
         }
 
         // オブジェクトが消えた時のサウンドを再生

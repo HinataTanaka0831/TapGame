@@ -4,15 +4,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
-public class EffectGenerator : MonoBehaviour
+public class EffectManager : MonoBehaviour
 {
-    public static EffectGenerator Instance { get; private set; }
+    public static EffectManager Instance { get; private set; }
     // Inspectorでエフェクトのプレハブをセットする枠
     [SerializeField] private GameObject effectPrefab;
-    [SerializeField] private GameObject objectPrefab;
 
+    /// <summary>
+    /// ゲーム内に一つしか存在しないようにする
+    /// </summary>
     private void Awake()
     {
+        // 最初の一つ目ならインスタンスを保存し、2つ以上生成されないように重複したオブジェクトは破棄する
         if (Instance == null)
         {
             Instance = this;
@@ -38,7 +41,7 @@ public class EffectGenerator : MonoBehaviour
         Animator anim = effectInstance.GetComponent<Animator>();
         if (anim != null)
         {
-            // アニメーションステートの名前（適宜書き換えてください）
+           
             AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
             float animLength = stateInfo.length;
 

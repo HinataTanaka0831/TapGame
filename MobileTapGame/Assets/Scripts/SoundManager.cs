@@ -35,7 +35,7 @@ public class SoundManager : MonoBehaviour
     /// <summary>
     /// 最初に一回だけ呼ばれる初期化
     /// </summary>
-    void Start()
+   private void Start()
     {
         // AudioSourceのコンポーネント取得（アタッチし忘れたとき用）
         if (audioSource == null)

@@ -25,7 +25,7 @@ public class TitleManager : MonoBehaviour
     /// <summary>
     /// Å‰‚Éˆê‰ñ‚¾‚¯ŒÄ‚Î‚ê‚é‰Šú‰»
     /// </summary>
-    void Start()
+   private void Start()
     {
         // ƒ^ƒCƒgƒ‹‰æ–Ê’†‚É—¬‚ê‚éBGM‚ğÄ¶‚·‚é
         if (SoundManager.Instance != null)

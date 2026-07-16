@@ -8,7 +8,7 @@ public class ClickManager : MonoBehaviour
     /// <summary>
     /// 更新
     /// </summary>
-   void Update()
+  private void Update()
    {
        OnEnableTapObject();
        OnEnableTapButton();
@@ -31,7 +31,7 @@ public class ClickManager : MonoBehaviour
             // 何かのコライダーに当たったかチェックし、当たったオブジェクトに「BalloonControllerスクリプト」がついていたら削除する
             if (hit.collider != null)
             {
-                BalloonController target = hit.collider.GetComponent<BalloonController>();
+                ObjectController target = hit.collider.GetComponent<ObjectController>();
                 if (target != null)
                 {
                     target.Fade();

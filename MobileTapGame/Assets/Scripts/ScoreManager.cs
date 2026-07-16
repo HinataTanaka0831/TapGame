@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour
     /// <summary>
     /// Å‰‚Éˆê‰ñ‚¾‚¯ŒÄ‚Î‚ê‚é‰Šú‰»
     /// </summary>
-   void Start()
+  private void Start()
    {
        this.score = 0;
    }
