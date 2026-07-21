@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1347956594}
   backgroundMusicTitle: {fileID: 8300000, guid: 1a7e72c86e7e30f41885999cfbda54a9, type: 3}
-  backgroundMusicGame: {fileID: 8300000, guid: 7864984b0078cfe49976472d6463a87f, type: 3}
+  soundEffectGame: {fileID: 8300000, guid: 7864984b0078cfe49976472d6463a87f, type: 3}
   backgroundMusicResult: {fileID: 8300000, guid: 47db7b331e20d074c9ef0e9bcc99b511, type: 3}
   fadeSound: {fileID: 8300000, guid: 529ea22c67a57944eafba35a78e5c7c0, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 0a1a83d22a69c5f44b089d26ae24ddab, type: 3}

@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
         // 制限時間を初期化
         remainingTime = gameTime;
 
-        // ゲーム画面中に流れるBGMを再生する
+        // ゲーム画面中に流れる効果音を再生する
         if (SoundManager.Instance != null)
         {
-            SoundManager.Instance.PlayBackgroundMusicGame();
+            SoundManager.Instance.PlaySoundEffectGame();
         }
 
     }

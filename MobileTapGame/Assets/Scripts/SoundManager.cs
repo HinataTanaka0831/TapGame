@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip backgroundMusicTitle;
-    [SerializeField] private AudioClip backgroundMusicGame;
+    [SerializeField] private AudioClip soundEffectGame;
     [SerializeField] private AudioClip backgroundMusicResult;
     [SerializeField] private AudioClip fadeSound;
     [SerializeField] private AudioClip buttonClickSound;
@@ -65,13 +65,13 @@ public class SoundManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒQ[ƒ€’†‚É—¬‚ê‚é”wŒi‰¹Šy‚ğÄ¶‚·‚é
+    /// ƒQ[ƒ€’†‚É—¬‚ê‚éŒø‰Ê‰¹‚ğÄ¶‚·‚é
     /// </summary>
-    public void PlayBackgroundMusicGame()
+    public void PlaySoundEffectGame()
     {
-        if (audioSource != null && backgroundMusicGame != null)
+        if (audioSource != null && soundEffectGame != null)
         {
-            audioSource.clip = backgroundMusicGame;
+            audioSource.clip = soundEffectGame;
             audioSource.loop = true;
             audioSource.Play();
         }
